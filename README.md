@@ -28,7 +28,7 @@ Where `cmd-N` represents a command you'd normally put into your `~/.xinitrc`.
 
 ## Building & Installing
 
-NOTE: Mare sure to initialize and update the git submodules or clone with `--recursive`
+NOTE: Mare sure to initialize and update the git submodules or clone with `--recursive`.
 
 ```sh
 cmake -S . -B build
