@@ -26,10 +26,10 @@ Options:
     -h, --help          show this message
     -c, --config <path> specify alternate config file
 
-The json configuration file should contain an object or
-array of keys to arrays of strings. The keys correspond
-to desktop names and the arrays to commands for startx
-to execute.
+The JSON configuration file should contain an object 
+where keys are desktop names, and values are arrays
+of strings representing commands for startx to execute.
+
 The configuration file will by default be looked up in
 '$XDG_CONFIG_HOME/sxssion/desktops.json'.
 )";
