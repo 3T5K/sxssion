@@ -1,0 +1,21 @@
+If:
+  PathMatch: [.*\.cpp, .*\.C, .*\.cxx, .*\.cc, .*\.hh, .*\.hxx, .*\.H, .*\.hpp, .*\.ixx, .*\.cppm, /usr/include/c\+\+/.*]
+
+CompileFlags:
+  CompilationDatabase: ./builds
+  Compiler: g++
+  Add: [
+    -std=c++23,
+    -D__cpp_concepts=202002,
+    -Wall,
+    -Wextra,
+    -Wconversion,
+    -Wunused,
+    -Wpedantic,
+    -Wshadow,
+    -stdlib=libstdc++
+  ]
+
+Diagnostics:
+  ClangTidy:
+    Add: modernize*
