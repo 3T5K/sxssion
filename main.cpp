@@ -26,13 +26,17 @@ Options:
     -h, --help          show this message
     -c, --config <path> specify alternate config file
 
+The configuration file will by default be looked up in
+'$XDG_CONFIG_HOME/sxssion/desktops.json'.
+
 The JSON configuration file should contain an object 
 where keys are desktop names, and values are arrays
 of strings representing commands for startx to execute.
 
-The configuration file will by default be looked up in
-'$XDG_CONFIG_HOME/sxssion/desktops.json'.
-)";
+Eg.: { "dwm": [ "exec dwm" ], "i3wm": [ "exec i3" ] }
+
+NOTE: '~/.xinitrc' is NOT overwritten!)";
+
 
 constexpr std::string_view 
     XINITRC_TMP = "/tmp/sxssion-tmp-xinitrc-7NeVeIYBH08OiJuwl5D4",
@@ -120,7 +124,7 @@ auto main(const int argc, /* const */ char *const *const argv) -> int {
 	fs::path config_path(CONFIG_PATH_DEFAULT);
 	for (int opt; (opt = getopt_long(argc, argv, "hlc:", opts.data(), nullptr)) != -1;) {
 		switch (opt) {
-			case 'h': die(HELP, 0);
+            case 'h': std::println("{}", HELP); std::exit(0);
 			case 'c': config_path = optarg; break;
 			case 'l': list_flag = 1; break;
 			case '?': die();
