@@ -24,12 +24,12 @@ Expected format:
 }
 ```
 
-Where `cmd-N` represents a command you'd normally put into your `~/.xinitrc`
+Where `cmd-N` represents a command you'd normally put into your `~/.xinitrc`.
 
 ## Building & Installing
 
 ```sh
 cmake -S . -B build
 cmake --build build --target sxssion
-sudo install -m 755 ./builds/sxssion /usr/local/bin/
+sudo install -m 755 ./build/sxssion /usr/local/bin/
 ```
