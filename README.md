@@ -1,6 +1,6 @@
 # sxssion
 
-Starts an X11 session with the specified environment (wraps startx).
+Starts an X11 session with the specified environment (wraps `startx`).
 
 ## Config
 
@@ -27,6 +27,8 @@ Expected format:
 Where `cmd-N` represents a command you'd normally put into your `~/.xinitrc`.
 
 ## Building & Installing
+
+NOTE: Mare sure to initialize and update the git submodules or clone with `--recursive`
 
 ```sh
 cmake -S . -B build
