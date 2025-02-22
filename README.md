@@ -5,6 +5,7 @@ Starts an X11 session with the specified environment (wraps startx).
 ## Config
 
 The configuration file will by default be looked up in `$XDG_CONFIG_HOME/sxssion/desktops.json`.
+
 Expected format:
 ```json
 {
@@ -22,6 +23,8 @@ Expected format:
     ...
 }
 ```
+
+Where `cmd-N` represents a command you'd normally put into your `~/.xinitrc`
 
 ## Building & Installing
 
