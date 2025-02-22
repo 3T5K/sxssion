@@ -23,4 +23,10 @@ Expected format:
 }
 ```
 
-## Building
+## Building & Installing
+
+```sh
+cmake -S . -B build
+cmake --build build --target sxssion
+sudo install -m 755 ./builds/sxssion /usr/local/bin/
+```

@@ -2,7 +2,7 @@ If:
   PathMatch: [.*\.cpp, .*\.C, .*\.cxx, .*\.cc, .*\.hh, .*\.hxx, .*\.H, .*\.hpp, .*\.ixx, .*\.cppm, /usr/include/c\+\+/.*]
 
 CompileFlags:
-  CompilationDatabase: ./builds
+  CompilationDatabase: ./build
   Compiler: g++
   Add: [
     -std=c++23,
