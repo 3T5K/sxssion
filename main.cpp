@@ -41,7 +41,7 @@ NOTE: '~/.xinitrc' is NOT overwritten!)";
 constexpr std::string_view 
     XINITRC_TMP = "/tmp/sxssion-tmp-xinitrc-7NeVeIYBH08OiJuwl5D4",
     XINITRC_DEF = "/etc/X11/xinit/xinitrc",
-    XINITRC_DEF_EXCL_FROM = "$twm &";
+    XINITRC_DEF_EXCL_FROM = "\"$twm\" &";
 
 const auto CONFIG_PATH_DEFAULT = fs::path(getenv("HOME"))/".config"/"sxssion"/"desktops.json";
 
